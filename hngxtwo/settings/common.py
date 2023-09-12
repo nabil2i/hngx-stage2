@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     # third-party apps
     
     # my apps
-    
+    'api',
 ]
 
 MIDDLEWARE = [
