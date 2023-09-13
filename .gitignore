@@ -7,4 +7,5 @@ docker-entrypoint.sh
 Dockerfile
 docker-compose.yml
 custom.cnf
+.env
 
