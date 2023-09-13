@@ -4,7 +4,7 @@ from .common import *
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ['SECRET_KEY']
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app']
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
