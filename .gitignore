@@ -3,4 +3,7 @@
 .vscode
 /mysqldb
 /docker
+/hngx2django/docker-entrypoint.sh
+/hngx2django/Dockerfile
+docker-compose.yml
 
