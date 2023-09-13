@@ -9,3 +9,4 @@ docker-compose.yml
 custom.cnf
 .env
 /vercel
+__pycache__
