@@ -144,7 +144,7 @@
 ## Local setup
 
 To set up the project in a development environment, follow the following instructions:
-* Create a python virtual environment
+* Create a python virtual environment and activate it
 * Go into your working directory and clone the project repository
 ```bash
 git clone https://github.com/nabil2i/hngx-stage2.git
@@ -164,7 +164,7 @@ For linux ubuntu
 export DEBUG=11
 
 # DB_URL is a postgres database URL
-export DB_URL=postgres_database_url
+export DB_URL=postgres://hngx_hmwo_user:wSD0ZwjnCQuF0iCkmPJqekUjtN5dTGpn@dpg-ck0vktkojvrs738rkvdg-a.oregon-postgres.render.com/hngx_hmwo
 ```
 * In the project directory, run django commands
 ```bash
