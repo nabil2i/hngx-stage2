@@ -6,4 +6,5 @@
 /hngx2django/docker-entrypoint.sh
 /hngx2django/Dockerfile
 docker-compose.yml
+custom.cnf
 
