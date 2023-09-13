@@ -12,13 +12,21 @@ SECRET_KEY = 'django-insecure-1n8!k4@&m$5bhzj*(9fu-#p(e!2ewzu^zfqnn+%hmen4m_n6kw
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-
 DATABASES = {
   'default': {
     'ENGINE': 'django.db.backends.mysql',
-    'NAME': 'hngx2',
-    'HOST': 'localhost',
-    'USER': 'root',
-    'PASSWORD': 'password'
+    'NAME': os.environ.get('DB_NAME'),
+    'HOST': os.environ.get('DB_HOST'),
+    'USER': os.environ.get('DB_USER'),
+    'PASSWORD': os.environ.get('DB_PASS'),
   }
 }
+# DATABASES = {
+#   'default': {
+#     'ENGINE': 'django.db.backends.mysql',
+#     'NAME': 'hngx2',
+#     'HOST': 'localhost',
+#     'USER': 'root',
+#     'PASSWORD': 'root'
+#   }
+# }
