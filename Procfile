@@ -1,1 +1,0 @@
-web: gunicorn hngxtwo.wsgi --log-file -

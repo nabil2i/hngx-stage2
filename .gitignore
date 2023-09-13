@@ -1,6 +1,7 @@
 api/views2.py
 .vscode
 /mysqldb
+/railway
 /docker
 docker-entrypoint.sh
 Dockerfile
