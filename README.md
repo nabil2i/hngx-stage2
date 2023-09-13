@@ -182,3 +182,4 @@ The app offers the `/api/` endpoint (`localhost:8000/api/`) for CRUD operations 
 ## Conception Model
 The resource available is a person resource, the model of which is available at this link (https://drive.google.com/file/d/1QOBEYO6phnhWr8QfzzG_98pLO-6q90NP/view?usp=sharing)
 
+![diagrams](./assets/hgnx-stage2-diagram-Diagram.drawio.png)
