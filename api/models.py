@@ -10,7 +10,7 @@ class Person(models.Model):
   
   # Dynamic attributes
   # dynamic_attributes = models.JSONField(default=dict, null=True)
-
+  #
   def __str__(self) -> str:
     return self.name
 
