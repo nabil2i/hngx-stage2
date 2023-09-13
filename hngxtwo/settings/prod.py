@@ -1,6 +1,8 @@
 import os
 from .common import *
 
+DEBUG = False
+
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ['SECRET_KEY']
 
@@ -15,5 +17,6 @@ DATABASES = {
     'HOST': os.environ.get('DB_HOST'),
     'USER': os.environ.get('DB_USER'),
     'PASSWORD': os.environ.get('DB_PASS'),
+    'PORT': os.environ.get('DB_PORT'),
   }
 }
