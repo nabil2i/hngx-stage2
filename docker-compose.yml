@@ -15,19 +15,19 @@ services:
       - DB_HOST=db
       - DB_NAME=hngx2
       - DB_PASS=root
-      - DB_USER=password
+      - DB_USER=root
       # - ALLOWED_HOSTS=143.110.230.206
     depends_on:
       - db 
 
   db:
-    image: mysql:8.0
+    image: mysql:latest
     ports:
       - 9000:3306
     restart: unless-stopped
     environment:
       - MYSQL_DATABASE=hngx2
-      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_ROOT_PASSWORD=root
     volumes:
       - mysqldata:/var/lib/mysql
     command:

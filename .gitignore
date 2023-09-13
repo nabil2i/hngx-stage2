@@ -1,3 +1,4 @@
 /hngx2django/db.sqlite3
 /hngx2django/api/views2.py
 .vscode
+/mysqldb
