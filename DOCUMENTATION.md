@@ -1,46 +1,5 @@
-# hgnx-stage2
-
-## Setup and Run
-The project is a simple REST API using pythondjango, capable of CRUD operations on a "person" resource
-To set up the project in a development environment, follow the following instructions:
-* Create a python virtual environment
-* Go into your working directory and clone the project repository
-```bash
-git clone https://github.com/nabil2i/hngx-stage2.git
-```
-* Install the project dependencies
-```bash
-pip install -r requirements.txt
-```
-You can install the requirements if using pipenv as follow
-```bash
-pipenv install
-```
-* Make sure to add `DEBUG` and `DB_URL` as environment variables
-For linux ubuntu
-```bash
-# In development environment,DEBUG needs to be a positive integer
-export DEBUG=11
-
-# DB_URL is a postgres database URL
-export DB_URL=postgres_database_url
-```
-* In the project directory, run django commands
-```bash
-# Make migrations and commit them
-python manage.py makemigrations
-python manage.py migrate
-
-# collect static files
-python manage.py collectstatic
-```
-* Run the application
-```bash
-python manage.py runserver
-```
-
-## Use the API
-The app offers the `/api/` endpoint (`localhost:8000/api/`) for CRUD operations on a person resource. It is deployed at [https://hngx-hiqu.onrender.com/api](https://hngx-hiqu.onrender.com/api)
+#DOCUMENTATION
+# Formats of requests and responses
 1. `POST`: Create a person resource
     * `/api/`: with a payload `{"name": "example_name"}` in the body of the request 
     ```
@@ -167,7 +126,6 @@ The app offers the `/api/` endpoint (`localhost:8000/api/`) for CRUD operations 
     
     ```
 
-
     If the resource has been delete, we receive a 204 NO_CONTENT response
   
     If resource not found
@@ -177,8 +135,50 @@ The app offers the `/api/` endpoint (`localhost:8000/api/`) for CRUD operations 
     }
     ```
 
+## Assumptions
+* The nameof each person is unique
 
+## Known issues
+* Django bypasses the validations implementated at the model level as well as serializer level when a name is sent as numbers, django automatically converts it into a string
 
-## Conception Model
-The resource available is a person resource, the model of which is available at this link (https://drive.google.com/file/d/1QOBEYO6phnhWr8QfzzG_98pLO-6q90NP/view?usp=sharing)
+## Local setup
 
+To set up the project in a development environment, follow the following instructions:
+* Create a python virtual environment
+* Go into your working directory and clone the project repository
+```bash
+git clone https://github.com/nabil2i/hngx-stage2.git
+```
+* Install the project dependencies
+```bash
+pip install -r requirements.txt
+```
+You can install the requirements if using pipenv as follow
+```bash
+pipenv install
+```
+* Make sure to add `DEBUG` and `DB_URL` as environment variables
+For linux ubuntu
+```bash
+# In development environment,DEBUG needs to be a positive integer
+export DEBUG=11
+
+# DB_URL is a postgres database URL
+export DB_URL=postgres_database_url
+```
+* In the project directory, run django commands
+```bash
+# Make migrations and commit them
+python manage.py makemigrations
+python manage.py migrate
+
+# collect static files
+python manage.py collectstatic
+```
+* Run the application
+```bash
+python manage.py runserver
+```
+
+## Tests
+Tests have been done using postman to make live requests
