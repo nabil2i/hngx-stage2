@@ -1,7 +1,7 @@
 import os
+import dj_database_url
 from .common import *
 
-DEBUG = True
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-1n8!k4@&m$5bhzj*(9fu-#p(e!2ewzu^zfqnn+%hmen4m_n6kw'
@@ -17,16 +17,17 @@ SECRET_KEY = 'django-insecure-1n8!k4@&m$5bhzj*(9fu-#p(e!2ewzu^zfqnn+%hmen4m_n6kw
 #     }
 # }
 
-DATABASES = {
-  'default': {
-    'ENGINE': 'django.db.backends.postgresql',
-    'NAME': 'railway',
-    'USER': 'postgres',
-    'PASSWORD': '3wZtIfS92YtCfVFstC54',
-    'HOST': 'containers-us-west-185.railway.app',
-    'PORT': '7064',
-  }
-}
+# DATABASES = {
+#   'default': {
+#     'ENGINE': 'django.db.backends.postgresql',
+#     'NAME': 'railway',
+#     'USER': 'postgres',
+#     'PASSWORD': '3wZtIfS92YtCfVFstC54',
+#     'HOST': 'containers-us-west-185.railway.app',
+#     'PORT': '7064',
+#   }
+# }
+
 
 # DATABASES = {
 #   'default': {
