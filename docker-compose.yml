@@ -1,0 +1,37 @@
+version: '3.9'
+
+services:
+  hngx2django:
+    build:
+      context: ./hngx2django
+    command: ./docker-entrypoint.sh
+    ports:
+      - 8000:8000
+    restart: unless-stopped
+    environment:
+      - SECRET_KEY=django-insecure-1n8!k4@&m$5bhzj*(9fu-#p(e!2ewzu^zfqnn+%hmen4m_n6kw
+      # - DJANGO_SETTINGS_MODULE
+      - DEBUG=1
+      - DB_HOST=db
+      - DB_NAME=hngx2
+      - DB_PASS=root
+      - DB_USER=password
+      # - ALLOWED_HOSTS=143.110.230.206
+    depends_on:
+      - db 
+
+  db:
+    image: mysql:8.0
+    ports:
+      - 9000:3306
+    restart: unless-stopped
+    environment:
+      - MYSQL_DATABASE=hngx2
+      - MYSQL_ROOT_PASSWORD=password
+    volumes:
+      - mysqldata:/var/lib/mysql
+    command:
+      - --default-authentication-plugin=mysql_native_password     
+
+volumes:
+  mysqldata:

@@ -1,2 +1,3 @@
-/db.sqlite3
-/api/views2.py
+/hgnx2django/db.sqlite3
+/hgnx2django/api/views2.py
+.vscode
