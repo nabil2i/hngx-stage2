@@ -136,7 +136,7 @@
     ```
 
 ## Assumptions
-* The nameof each person is unique
+* The name of each person is unique
 
 ## Known issues
 * Django bypasses the validations implementated at the model level as well as serializer level when a name is sent as numbers, django automatically converts it into a string
@@ -179,6 +179,11 @@ python manage.py collectstatic
 ```bash
 python manage.py runserver
 ```
+## Conception Model
+The resource available is a person resource, the model of which is available at this link (https://drive.google.com/file/d/1QOBEYO6phnhWr8QfzzG_98pLO-6q90NP/view?usp=sharing)
+
+![diagrams](./assets/hgnx-stage2-diagram-Diagram.drawio.png)
+
 
 ## Tests
 Tests have been done using postman to make live requests
