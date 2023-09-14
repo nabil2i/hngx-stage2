@@ -140,6 +140,7 @@
 
 ## Known issues
 * Django bypasses the validations implementated at the model level as well as serializer level when a name is sent as numbers, django automatically converts it into a string
+* The app is deployed on render.com and it fails to take into account the static files at the moment
 
 ## Local setup
 

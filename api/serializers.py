@@ -15,8 +15,7 @@ class PersonSerializer(serializers.ModelSerializer):
   def validate(self, data):
     name = data.get('name')
     
-    data = super().validate(data)
-    
+    # data = super().validate(data)
     # Perform field-specific validation here
     if not isinstance(name, str):
       raise serializers.ValidationError('The field "name" must be a string.')
